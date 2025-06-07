@@ -13,7 +13,7 @@ import {
 const MobileNav = () => {
   return (
     <>
-      <div className="flex items-center justify-between">
+      <section className="flex w-full items-center justify-between">
         <div className="flex gap-6">
           <Link href="/">
             <Image
@@ -57,7 +57,7 @@ const MobileNav = () => {
             <Link href="/contact">CONTACT</Link>
           </SheetContent>
         </Sheet>
-      </div>
+      </section>
     </>
   );
 };

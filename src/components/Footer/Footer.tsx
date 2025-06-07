@@ -4,8 +4,8 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-background flex flex-col items-center justify-center gap-6 px-6 py-16">
-        <div className="flex flex-col items-center justify-center gap-4">
+      <footer className="bg-background flex flex-col items-center justify-center gap-6 px-6 py-16 md:flex-row md:justify-between md:px-[7.5rem] xl:px-[15rem]">
+        <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
           <Link href="/">HOME</Link>
           <Link href="/about">ABOUT</Link>
           <Link href="/services">SERVICES</Link>

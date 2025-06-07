@@ -1,3 +1,4 @@
+import TalkToUsComp from "@/components/TalkToUsComp";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -10,60 +11,66 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
-      <section className="">
+      <section className="space-y-16 md:space-y-24">
         {/* Hero section */}
 
-        <div className="flex h-[80dvh] flex-col items-center gap-3 bg-[url('/home-images/banner.jpg')] bg-cover bg-center bg-no-repeat">
-          <div className="text-color-seaweed pt-[10rem] text-5xl font-bold tracking-[.5rem]">
+        <div className="flex h-[50dvh] w-full flex-col items-center bg-[url('/home-images/banner.jpg')] bg-cover bg-center bg-no-repeat pt-[8rem] md:h-dvh md:pt-[20rem]">
+          <div className="text-color-seaweed text-5xl font-bold tracking-[.5rem] md:text-[5rem]">
             EARTH
           </div>
-          <div className="dark:text-background text-2xl font-light tracking-widest">
+          <div className="dark:text-background text-2xl font-light tracking-widest md:text-[2.5rem]">
             ENDLESS POTENTIAL
           </div>
-          <Button className="bg-color-chelsea-cucumber hover:bg-color-seaweed mt-2 rounded-none px-7 py-3.5 dark:text-white">
+          <Button className="bg-color-chelsea-cucumber hover:bg-color-seaweed mt-6 rounded-none px-7 py-3.5 tracking-widest md:mt-8 md:px-12 md:py-6 md:text-lg dark:text-white">
             EXPLORE
           </Button>
         </div>
 
         {/* Services section */}
 
-        <div className="mx-auto space-y-10 px-6 py-16">
-          <div className="">
+        <div className="container mx-auto grid grid-cols-1 gap-10 px-6 md:grid-cols-3 md:gap-10">
+          <div className="w-full">
             <Image
-              src={"/home-images/web-design.jpg"}
+              src={"/home-images/service-1-min.jpg"}
               alt="Web Design"
-              width={348}
-              height={275}
+              width={702}
+              height={858}
             />
-            <div className="pt-4 text-2xl font-bold">Web Design</div>
+            <div className="pt-6 text-2xl font-bold md:text-3xl">
+              Web Design
+            </div>
             <div className="text-foreground/50 pt-2">
               Custom web design for small businesses, we help you capture new
               audiences and increase your sales.
             </div>
           </div>
 
-          <div className="">
+          <div className="w-full">
             <Image
-              src={"/home-images/graphic-Design.jpg"}
+              src={"/home-images/service-2-min.jpg"}
               alt="Graphic Design"
-              width={348}
-              height={275}
+              width={702}
+              height={858}
             />
-            <div className="pt-4 text-2xl font-bold">Graphic Design</div>
+            <div className="pt-6 text-2xl font-bold md:text-3xl">
+              Graphic Design
+            </div>
             <div className="text-foreground/50 pt-2">
               Logos, merchandise and more. Anyone can create nice graphics. We
               think it’s better to create memorable ones.
             </div>
           </div>
 
-          <div className="">
+          <div className="w-full">
             <Image
-              src={"/home-images/content-Writing.jpg"}
+              src={"/home-images/service-3-min.jpg"}
               alt="Content Creation"
-              width={348}
-              height={275}
+              width={702}
+              height={858}
             />
-            <div className="pt-4 text-2xl font-bold">Content Creation</div>
+            <div className="pt-6 text-2xl font-bold md:text-3xl">
+              Content Creation
+            </div>
             <div className="text-foreground/50 pt-2">
               Want to attract people to your website? You have to have the best
               content in the world. That’s what we do.
@@ -73,35 +80,28 @@ const page = () => {
 
         {/* About section */}
 
-        <div className="mx-auto space-y-4 px-6 py-16">
-          <div className="text-3xl font-bold tracking-widest">ABOUT US</div>
-          <div className="">
-            I made it so it is super easy to update and so that it flows
-            perfectly with my tutorials. Lots of love and hundreds of hours went
-            into making it. I hope you love it as much as I do. I wish you the
-            best of luck with your business, enjoy the adventure.
+        <div className="container mx-auto grid grid-cols-1 gap-6 px-6 md:grid-cols-2 md:gap-16">
+          <div className="flex h-full flex-col justify-center gap-6">
+            <div className="text-3xl font-bold tracking-widest md:text-4xl">
+              ABOUT US
+            </div>
+            <div className="">
+              I made it so it is super easy to update and so that it flows
+              perfectly with my tutorials. Lots of love and hundreds of hours
+              went into making it. I hope you love it as much as I do. I wish
+              you the best of luck with your business, enjoy the adventure.
+            </div>
           </div>
           <Image
             src={"/home-images/our-mission-min.jpg"}
             alt="About Us"
-            width={348}
-            height={275}
+            width={1000}
+            height={1000}
           />
         </div>
 
         {/* Contact section */}
-        <div className="flex h-[70dvh] flex-col items-center justify-center gap-3 bg-[url('/home-images/call-to-action.jpg')] bg-cover bg-center bg-no-repeat px-6">
-          <div className="text-color-seaweed text-center text-4xl font-bold tracking-wider">
-            TALK TO US
-          </div>
-          <div className="dark:text-background text-center">
-            Have any questions? We are always open to talk about your business,
-            new projects, creative opportunities and how we can help you.
-          </div>
-          <Button className="bg-color-chelsea-cucumber hover:bg-color-seaweed mt-6 rounded-none px-8 py-6 tracking-widest dark:text-white">
-            GET IN TOUCH
-          </Button>
-        </div>
+        <TalkToUsComp />
       </section>
     </>
   );

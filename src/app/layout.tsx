@@ -22,7 +22,9 @@ const RootLayout = ({ children }: RootLayoutProps) => {
           enableSystem={false}
           themes={["light", "dark"]}>
           <Header />
+
           <main className="mx-auto">{children}</main>
+
           <Footer />
         </ThemeProvider>
       </body>

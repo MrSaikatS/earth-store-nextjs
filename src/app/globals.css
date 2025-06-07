@@ -3,9 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ------------------- adding "Nature" theme variables from tweakcn.com--------------------- */
+
 @theme inline {
+  /* ------------------- adding font variables--------------------- */
   --font-roboto: var(--font-roboto);
 
+  /* ------------------- adding color variables--------------------- */
   --color-color-chelsea-cucumber: #74a84a;
   --color-color-seaweed: #2c541d;
 
